@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio formulario 3</title>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Tu Experiencia General</legend>
+            <label for="satisfaccion">¿Qué tan satisfecho estás con nuestro servicio/producto en general?</label><br>
+            <input type="radio" name="satisfaccion" id="muySatisfecho">
+            <label for="muySatisfecho">Muy satisfecho</label><br>
+            <input type="radio" name="satisfaccion" id="satisfecho">
+            <label for="satisfecho">Satisfecho</label><br>
+            <input type="radio" name="satisfaccion" id="neutral">
+            <label for="neutral">Neutral</label><br>
+            <input type="radio" name="satisfaccion" id="insatisfecho">
+            <label for="insatisfecho">Insatisfecho</label><br>
+            <input type="radio" name="satisfaccion" id="muyInsatisfecho">
+            <label for="muyInsatisfecho">Muy insatisfecho</label><br><br>
+
+            <label for="calificacion">Califica nuestro servicio/producto (1-5, donde 5 es excelente)</label><br>
+            <input type="range" min="1" max="5" name="calificacion" id="calificacion" list="listaCalificacion"><br><br>
+            <datalist id="listaCalificacion">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </datalist>
+
+            <label for="aspectos">¿Qué aspectos te gustaron más? (Selecciona todos los que apliquen)</label><br>
+            <input type="checkbox" name="aspectos" id="interfaz">
+            <label for="interfaz">Interfaz de usuario</label><br>
+            <input type="checkbox" name="aspectos" id="rendimiento">
+            <label for="rendimiento">Rendimiento/Velocidad</label><br>
+            <input type="checkbox" name="aspectos" id="soporte">
+            <label for="soporte">Soporte al cliente</label><br>
+            <input type="checkbox" name="aspectos" id="precio">
+            <label for="precio">Precio</label><br>
+            <input type="checkbox" name="aspectos" id="funcionalidades">
+            <label for="funcionalidades">Funcionalidades</label>
+
+            <label for="sugerencias">Sugerencias para mejorar</label><br>
+            <textarea cols="80" rows="8" name="sugerencias" id="sugerencias"
+                placeholder="Nos encantaría escuchar tus ideas para hacer nuestro servicio/producto aún mejor."></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Información Adicional (opcional)</legend>
+            <label for="profesion">Tu profesión</label><br>
+            <input type="text" name="profesion" id="profesion"><br><br>
+            <label for="edad">Tu edad</label><br>
+            <input type="number" name="edad" id="edad"><br><br>
+            <label for="email">Tu profesión</label><br>
+            <input type="email" name="email" id="email"><br><br>
+        </fieldset>
+        <input type="submit" value="Enviar Encuesta">
+        <input type="reset" value="Reinciar">
+    </form>
+</body>
+
+</html>
