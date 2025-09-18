@@ -12,7 +12,7 @@
         <fieldset>
             <legend>Tu Experiencia General</legend>
             <label for="satisfaccion">¿Qué tan satisfecho estás con nuestro servicio/producto en general?</label><br>
-            <input type="radio" name="satisfaccion" id="muySatisfecho">
+            <input type="radio" name="satisfaccion" id="muySatisfecho" required>
             <label for="muySatisfecho">Muy satisfecho</label><br>
             <input type="radio" name="satisfaccion" id="satisfecho">
             <label for="satisfecho">Satisfecho</label><br>
@@ -52,10 +52,17 @@
         <fieldset>
             <legend>Información Adicional (opcional)</legend>
             <label for="profesion">Tu profesión</label><br>
-            <input type="text" name="profesion" id="profesion"><br><br>
+            <select name="profesion" id="profesion">
+                <option value=""></option>
+                <option value="estudiante">Estudiante</option>
+                <option value="ingeniero">ingeniero</option>
+                <option value="dseñador">Diseñador</option>
+                <option value="docente">Docente</option>
+                <option value="empresario">Empresario</option>
+            </select><br><br>
             <label for="edad">Tu edad</label><br>
-            <input type="number" name="edad" id="edad"><br><br>
-            <label for="email">Tu profesión</label><br>
+            <input type="number" min="18" max="99" name="edad" id="edad"><br><br>
+            <label for="email">Tu Email</label><br>
             <input type="email" name="email" id="email"><br><br>
         </fieldset>
         <input type="submit" value="Enviar Encuesta">
