@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio formulario 1</title>
+</head>
+<!-- Ejercicio 1 (Ejercicio1.html)
+ Crea un formulario de registro para un nuevo usuario que incluya información personal, 
+credenciales de acceso y preferencias. Todos los campos deben ser validados por el navegador antes 
+de poder enviar el formulario. -->
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Información personal</legend>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" maxlength="20" name="nombre" id="nombre" required><br><br>
+            <label for="nombre">Apellido:</label><br>
+            <input type="text" maxlength="20" name="apellido" id="apellido" required><br><br>
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label><br>
+            <input type="date" name="fechaNacimiento" id="fechaNacimiento" required><br><br>
+            <label for="genero">Género:</label><br>
+            <input type="radio" name="genero" id="masculino" required>Masculino<br>
+            <input type="radio" name="genero" id="femenino" required>Femenino<br>
+            <input type="radio" name="genero" id="otro" required>Otro<br><br>
+            <select name="paisResidencia" required>
+                <option value="default">--Selecciona un país--</option>
+                <optgroup label="América">
+                    <option value="Argentina">Argentina</option>
+                    <option value="México">México</option>
+                    <option value="Estados Unidos">Estados Unidos</option>
+                </optgroup>
+                <optgroup label="Europa">
+                    <option value="España">España</option>
+                    <option value="Francia">Francia</option>
+                    <option value="Alemania">Alemania</option>
+                </optgroup>
+                <optgroup label="Asia">
+                    <option value="Japón">Argentina</option>
+                    <option value="China">China</option>
+                </optgroup>
+            </select><br><br>
+            <label for="telefono">Teléfono:</label><br>
+            <input type="number" max="999999999" name="telefono" id="telefono" placeholder="Ej: 123456789" required><br>
+        </fieldset>
+        <fieldset>
+            <legend>Credenciales de Acceso</legend>
+            <label for="email">Email:</label><br>
+            <input type="email" name="email" id="email" required><br><br>
+            <label for="contrasena">Contraseña:</label><br>
+            <input type="password" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$"
+                title="Debe contener al menos una letra mayúscula, una mínuscula, un número y tener al menos 8 caracteres"
+                name="contrasena" id="contrasena" required><br><br>
+            <label for="confirmarContrasena">Confirmar Contraseña:</label><br>
+            <input type="password" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$"
+                title="Debe contener al menos una letra mayúscula, una mínuscula, un número y tener al menos 8 caracteres"
+                name="confirmarContrasena" id="confirmarContrasena" required><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Preferencias y Términos</legend>
+            <input type="checkbox" name="tecnologia" id="tecnologia">
+            <label for="tecnologia">Tecnología</label><br>
+            <input type="checkbox" name="deportes" id="deportes">
+            <label for="tecnologia">Deportes</label><br>
+            <input type="checkbox" name="cocina" id="cocina">
+            <label for="tecnologia">Cocina</label><br><br>
+            <label for="notificaciones">Recibir Notificaciones por Email:</label><br>
+            <input type="checkbox" name="notificaciones" id="notificaciones" checked><br><br>
+            <input type="checkbox" name="terminos" id="terminos" required>
+            <label for="notificaciones">Acepto los <a href="">Términos y condiciones</a></label><br>
+        </fieldset>
+        <input type="submit" value="Registrarse">
+        <button>Limpiar Formulario</button>
+
+
+
+    </form>
+</body>
+
+</html>

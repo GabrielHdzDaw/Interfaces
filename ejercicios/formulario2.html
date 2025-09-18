@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio formulario 2</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Tipo de Solicitud</legend>
+            <select name="solicitud" id="solicitud">
+                <option value="default">--Selecciona un país--</option>
+                <optgroup label="Productos">
+                    <option value="a">Producto A</option>
+                    <option value="b">Producto B</option>
+                    <option value="c">Producto C</option>
+                </optgroup>
+                <optgroup label="Servicios">
+                    <option value="consultoria">Servicio de Consultoría</option>
+                    <option value="mantenimiento">Servicio de Mantenimiento</option>
+                    <option value="instalacion">Servicio de Instalación</option>
+                </optgroup>
+            </select><br><br>
+            <label for="cantidad">Cantidad (para productos):</label><br>
+            <input type="number" min="1" max="100" name="cantidad" id="cantidad"><br><br>
+            <label for="prioridad">Prioridad de la Solicitud</label><br>
+            <input type="radio" name="prioridad" id="prioridadBaja">
+            <label for="prioridadBaja">Baja</label><br>
+            <input type="radio" name="prioridad" id="prioridadMedia">
+            <label for="prioridadMedia">Media</label><br>
+            <input type="radio" name="prioridad" id="prioridadAlta">
+            <label for="prioridadAlta">Alta</label><br>
+        </fieldset>
+        <fieldset>
+            <legend>Detalles Adicionales</legend>
+            <label for="comentarios">Comentarios o especificaciones:</label><br>
+            <textarea name="comentarios" maxlength="500" id="comentarios"></textarea><br>
+            <span><small>Máximo 500 carácteres</small></span><br><br>
+            <label for="fecha">Fecha Deseada de Entrega/Inicio:</label><br>
+            <input type="date" name="fecha" id="fecha" min="2025-09-18" value="2025-09-18"><br><br>
+            <label for="horario">Rango Horario Preferido</label><br>
+            <input type="time" name="horario" id="horario1">
+            <input type="time" name="horario" id="horario2"><br><br>
+            <label for="documento">Adjuntar documento (opcional):</label><br>
+            <input type="file" name="documento" id="documento" accept="pdf/doc/docx">
+        </fieldset>
+        <fieldset>
+            <legend>Información de Contacto</legend>
+            <label for="nombre">Tu nombre:</label><br>
+            <input type="text" name="nombre" id="nombre" required><br><br>
+            <label for="email">Tu email:</label><br>
+            <input type="email" name="email" id="email" required><br><br>
+            <label for="telefono">Tu telefono:</label><br>
+            <input type="number" name="telefono" id="telefono" required>
+        </fieldset>
+    </form>
+</body>
+</html>
