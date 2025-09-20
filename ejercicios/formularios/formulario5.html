@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio formulario 5</title>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Información del empleado</legend>
+            <label for="id">ID de Empleado(Formato: EMP-1234):</label><br>
+            <input type="text" name="id" id="id" pattern="^[A-Z]{3}-\d{4}$"
+                title="3 letras mayúsculas seguidas de un guión y 4 números."><br><br>
+            <label for="nombre">Nombre de usuario (5-15 caracteres, solo minúsculas y números):</label><br>
+            <input type="text" name="nombre" id="nombre" pattern="^[a-z0-9]{5,15}$"
+                title="5-15 caracteres, solo minúsculas y números."><br><br>
+            <label for="postal">Código postal de la oficina (5 dígitos):</label><br>
+            <input type="text" name="postal" id="postal" pattern="^[0-9]{5}$"
+                title="5 dígitos."><br><br>
+        </fieldset>
+        <input type="submit" value="Registrarse al Evento">
+    </form>
+</body>
+
+</html>

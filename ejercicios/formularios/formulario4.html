@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio formulario 4</title>
 </head>
+
 <body>
     <form action="">
         <p>Por favor, introduce los datos respetando los formatos especificados.</p>
         <fieldset>
             <legend>Detalles del Contenido y Cuenta</legend>
             <label for="sku">SKU del Proyecto (Ej: AB-12345):</label><br>
-            <input type="text" name="sku" id="sku"><br><br>
+            <input type="text" name="sku" id="sku" pattern="^[A-Z]{2}-\d{5}$"
+                title="Dos letras mayúsculas, guión y 5 dígitos."><br><br>
             <label for="contrasena">Nueva contraseña (mín. 8 caracteres, con mayúscula, minúscula y número):</label><br>
-            <input type="password" name="contrasena" id="contrasena"><br><br>
+            <input type="password" name="contrasena" id="contrasena" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}$"
+                title="Mínimo 8 caracteres, con al menos una mayúscula, una minúscula y un número."><br><br>
             <label for="color">Color Principal del Branding (Hexadecimal, ej: #FF5733):</label><br>
-            <input type="text" name="color" id="color"><br><br>
+            <input type="text" name="color" id="color" pattern="^#[A-Fa-f0-9]{6}$"
+                title="El formato debe ser como #FF5733"><br><br>
             <label for="video">ID de Video Relacionado (11 caracteres):</label><br>
-            <input type="text" name="video" id="video"><br><br>
+            <input type="text" name="video" id="video" minlength="11" maxlength="11"
+                title="El ID del vídeo debe tener 11 caracteres."><br><br>
             <label for="matricula">Matrícula del Vehículo de Producción (Ej: 1234 BCD):</label><br>
-            <input type="text" name="matricula" id="matricula"><br><br>
+            <input type="text" name="matricula" id="matricula" pattern="^[0-9]{4} [A-Z]{3}$"
+                title="4 dígitos, espacio y 3 letras mayúsculas."><br><br>
         </fieldset>
         <input type="submit" value="Enviar información">
     </form>
 </body>
+
 </html>
