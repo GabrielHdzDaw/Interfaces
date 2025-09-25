@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: blanchedalmond;
+}
+
+header,
+footer {
+    background-color: rgb(56, 56, 102);
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 40px 0 0 0;
+}
+
+header h1 {
+    font-family: "Libre Baskerville";
+    font-size: 60px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-family: "Zalando Sans Expanded";
+    margin-bottom: 20px;
+}
+
+nav {
+    background-color: rgb(72, 72, 128);
+    padding: 20px;
+}
+
+nav>ul li {
+    list-style-type: none;
+    display: inline;
+    padding: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    margin: 0 auto;
+    width: 50vw;
+}
+
+article {
+    max-width: 50vw;
+}
+
+article h1,
+h2 {
+    text-transform: capitalize;
+}
+
+article>section>h2+p {
+    font-weight: bold;
+}
+
+article p {
+    text-align: left;
+}
+
+/* article>section:first-of-type>p:first-of-type {} */
+
+
+.hito {
+    color: red;
+    font-style: italic;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.overflow,
+aside {
+    background-color: rgb(255, 244, 228);
+    padding: 20px;
+    margin: 10px;
+}
+
+footer {
+    padding: 20px;
+    position: static;
+}
