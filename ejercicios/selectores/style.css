@@ -10,6 +10,8 @@ body {
     background-color: blanchedalmond;
 }
 
+
+
 header,
 footer {
     background-color: rgb(56, 56, 102);
@@ -17,8 +19,14 @@ footer {
     text-align: center;
 }
 
+h2,
+h3,
+h4 {
+    margin: 10px;
+}
+
 header {
-    padding: 40px 0 0 0;
+    padding-top: 50px;
 }
 
 header h1 {
@@ -29,7 +37,7 @@ header h1 {
 
 header p {
     font-family: "Zalando Sans Expanded";
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 nav {
@@ -50,11 +58,7 @@ nav a {
 
 main {
     margin: 0 auto;
-    width: 50vw;
-}
-
-article {
-    max-width: 50vw;
+    width: 30vw;
 }
 
 article h1,
@@ -64,29 +68,40 @@ h2 {
 
 article>section>h2+p {
     font-weight: bold;
+    text-indent: 2em;
+    word-spacing: 0.2em;
 }
 
 article p {
     text-align: left;
 }
 
-/* article>section:first-of-type>p:first-of-type {} */
-
+h3+p {
+    word-spacing: 0.3em;
+}
 
 .hito {
     color: red;
-    font-style: italic;
+    font-style: oblique;
 }
 
 .overflow {
     overflow: hidden;
+    padding: 10px;
 }
 
 .overflow,
 aside {
     background-color: rgb(255, 244, 228);
-    padding: 20px;
     margin: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+aside {
+    border-left: solid rgb(83, 143, 255) 4px;
+    padding: 20px;
 }
 
 footer {

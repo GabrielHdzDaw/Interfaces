@@ -19,7 +19,7 @@ header h1 {
     margin: 20px;
 }
 
-header ul li{
+header ul li {
     display: inline;
     list-style-type: none;
 }
@@ -34,6 +34,28 @@ header a {
     margin: 0 auto;
     min-width: 700px;
     max-width: 1200px;
+    clear: both;
+}
+
+input {
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid rgb(194, 194, 194);
+}
+
+input[type="submit"]{
+    background-color: rgb(6, 139, 228);
+    color: white;
+    border: none;
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+textarea {
+    border-radius: 5px;
+    border: 1px solid rgb(194, 194, 194);
 }
 
 aside,
@@ -41,17 +63,35 @@ article {
     box-shadow: 1px 1px 2px 1px rgb(110, 110, 110);
     width: fit-content;
     padding: 20px;
+    margin: 10px;
     border-radius: 5px;
+
 }
 
+article {
+    overflow: auto;
+}
+
+article+article {
+    border-left: rgb(0, 197, 0) 4px solid;
+}
+
+article+article h3 {
+    color: rgb(0, 197, 0);
+}
+
+article+article li::before{
+    content: "✔ ";
+}
 
 main {
     float: left;
-
+    width: 68%;
 }
 
 aside {
     float: right;
+    width: 30%;
 }
 
 header,
