@@ -1,0 +1,16 @@
+1. ¿Qué ocurre con el display block? ¿Qué ancho ocupa? ¿Respeta el tamaño?¿Hace que se 
+“empujen” la siguientes tarjetas abajo?
+    Ocupa el ancho del propio elemento. Cada próximo elemento salta a la línea de abajo.
+    Respeta el tamaño de las tarjetas.
+    Sí, las siguientes tarjetas saltan a la siguiente línea.
+
+2. Responde la 1ª pregunta pero con display inline
+    Se quedan todos los elementos en el centro de la galería, rotos. 
+    Ocupa el ancho de un elemento.
+    No respeta el tamaño, todas las tarjetas están rotas.
+    Hace que todas se apilen en el centro de la galería.
+
+3. Responde la 1ª pregunta pero con display inline-block
+    Todos los elementos se comportan en línea, pero se distribuyen en el ancho de la galería.
+    Respeta el tamaño.
+    Cada elemento aparece al lado del otro, en línea. Es como display block pero los elementos se representan en horizontal.

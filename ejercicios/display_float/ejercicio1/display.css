@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+
+    text-shadow: 2px 2px 2px black;
+}
+
+body {
+    font-family: Creepster, system-ui;
+    background-color: #191a2e;
+    color: #f96e6e;
+}
+
+div {
+    color: white;
+}
+
+h2 {
+    margin: 20px;
+}
+
+.galeria {
+    border: 3px dotted yellow;
+    border-radius: 20px;
+    background-color: #2f3157;
+    padding: 50px;
+    margin: 0 auto;
+    max-width: 75%;
+
+}
+
+.card {
+    border: 2px solid #f96e6e;
+    background-color: #424579;
+    box-shadow: 3px 3px 10px 2px black;
+    border-radius: 20px;
+    width: 20%;
+    padding: 5em;
+    margin: 1em;
+}
+
+.galeria:nth-of-type(1) .card{
+    display: block;
+}
+
+.galeria:nth-of-type(2) .card{
+    display: inline;
+}
+
+.galeria:nth-of-type(3) .card{
+    display: inline-block;
+}
