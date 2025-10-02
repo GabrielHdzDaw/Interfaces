@@ -1,6 +1,6 @@
 body {
     font-family: "Bangers", system-ui;
-    background:  #56ab2f; 
+    background: #56ab2f;
     color: #3a2e2e;
     margin: 0;
     padding: 20px;
@@ -14,11 +14,11 @@ main {
     border: 8px groove #c2a388;
     border-radius: 25px;
     padding: 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 
-h1 {    
+h1 {
     text-shadow: 2px 2px #fff;
     margin-bottom: 30px;
 }
@@ -26,17 +26,22 @@ h1 {
 .item {
     width: 150px;
     height: 150px;
-    object-fit: cover; /* Hacemos que la imagen no se deforme */
+    object-fit: cover;
+    /* Hacemos que la imagen no se deforme */
     border: 4px solid #fff;
-    border-radius: 50%; /* hacemos que el contenido quede circular */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-radius: 50%;
+    /* hacemos que el contenido quede circular */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     margin: 10px;
-    transition: transform 0.3s ease; /* Efecto al pasar el ratón */
+    transition: transform 0.3s ease;
+    /* Efecto al pasar el ratón */
 }
 
 .item:hover {
-    transform: scale(1.1); /* Se agranda un poco al pasar el ratón */
-    box-shadow: 0 8px 25px rgba(255, 99, 71, 0.5); /* Sombra de color */
+    transform: scale(1.1);
+    /* Se agranda un poco al pasar el ratón */
+    box-shadow: 0 8px 25px rgba(255, 99, 71, 0.5);
+    /* Sombra de color */
 }
 
 p {
@@ -45,3 +50,18 @@ p {
     margin-top: 40px;
 }
 
+.personajes {
+    clear: both;
+}
+
+.pareja1 {
+    float: left;
+}
+
+.pareja2 {
+    float: right;
+}
+
+.logo{
+    clear: both;
+}
