@@ -40,13 +40,13 @@
     .item-4 {
         background-color: #59518c;
         place-self: center;
-        padding: 20px;
+        padding: 50px;
     }
 
     .item-8 {
         background-color: #bb518f;
         place-self: center;
-        padding: 20px;
+        padding: 50px;
     }
 
     .item-9 {
@@ -56,6 +56,6 @@
     .item-11 {
         background-color: #ffa500;
         place-self: center;
-        padding: 20px;
+        padding: 50px;
     }
 }
