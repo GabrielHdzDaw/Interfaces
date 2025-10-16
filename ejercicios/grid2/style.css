@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    color: white;
+}
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    background-color: #202020;
+    border: 3px dotted grey;
+    padding: 20px;
+    grid-template-columns: repeat(5, 1fr);
+
+    .item {
+        border: 1px solid grey;
+        border-radius: 5px;
+        padding: 10px;
+
+    }
+
+    .item-2 {
+        background-color: #00415c;
+    }
+
+    .item-4 {
+        background-color: #59518c;
+    }
+
+    .item-8 {
+        background-color: #bb518f;
+    }
+
+    .item-9 {
+        background-color: #ff6361;
+    }
+
+    .item-11 {
+        background-color: #ffa500;
+    }
+}
