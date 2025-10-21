@@ -1,0 +1,23 @@
+:root {
+    --bg-color: rgb(233, 233, 233);
+    --headings: #0fa5e4;
+    --card-border: white;
+}
+
+:where(h1, h2) {
+    color: var(--headings);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: minmax();
+
+    &.card {
+        border-radius: 20px;
+        border: 1px solid var(--card-border);  
+        &:has(image) {
+            
+        }
+        &:not()
+    }
+}
