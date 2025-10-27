@@ -1,0 +1,42 @@
+:root {
+    --header-color: #7030f8;
+    --text-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+
+    header {
+        color: var(--text-color);
+        background-color: var(--header-color);
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    main {
+        margin: 50px;
+    }
+}
+
+footer {
+    display: flex;
+    background-color: var(--header-color);
+    color: var(--text-color);
+    justify-content: center;
+    padding: 20px;
+
+    &:after {
+        content: "Tu navegador no soporta esta funcionalidad";
+    }
+}
+
+
+
+/* @import url('gallery.css'); */
