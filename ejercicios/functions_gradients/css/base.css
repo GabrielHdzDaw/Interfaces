@@ -1,0 +1,11 @@
+body{
+    color: white;
+    font-family: "Roboto", sans-serif;
+    background-color: red;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

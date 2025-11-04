@@ -1,0 +1,4 @@
+.product-card {
+    width: min(90vw, 380px);
+    padding: calc(1.5rem + 2px);
+}

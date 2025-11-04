@@ -35,4 +35,4 @@ footer {
 
 
 
-/* @import url('gallery.css'); */
+@import url('gallery.css') layer(gallery);
