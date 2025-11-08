@@ -1,11 +1,16 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body{
     color: white;
     font-family: "Roboto", sans-serif;
-    background-color: red;
 }
 
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }

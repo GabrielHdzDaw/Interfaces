@@ -1,11 +1,7 @@
-@layer base {
-    @import url("./base.css");
-}
+@layer base, components, utilities;
 
-@layer components {
-    @import url("./components.css");
-}
+@import url("./base.css") layer(base);
 
-@layer utilities {
-    @import url("./utilities.css");
-}
+@import url("./components.css") layer(components);
+
+@import url("./utilities.css") layer(utilities);
