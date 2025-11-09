@@ -1,6 +1,6 @@
 :root {
   --box-shadow: 1px 1px 10px 1px grey;
-  --border-featured:
+  --border-featured: ;
 }
 
 .gallery-grid {
@@ -26,7 +26,6 @@
 
   .item-wide {
     grid-column: span 2;
-    
   }
 
   .item-tall {
@@ -40,8 +39,7 @@
   initial-value: 0;
 }
 
-@supports (color: if(style(--is-featured: 0): white;
-else: grey)) {
+@supports (color: if(style(--is-featured: 0): white; else: grey)) {
   img {
     border: none;
     box-shadow: none;
@@ -66,8 +64,18 @@ else: grey)) {
     border: if(style(--is-featured: 1): 2px solid yellow; else: 2px solid black);
   }
 
+  img {
+    transform: if(style(--is-featured: 1): scale(1.03); else: scale(1));
+  }
+
   footer::after {
     content: "Tu navegador soporta la funcionalidad if";
+  }
+}
+
+@supports not(color: if(style(--is-featured: 0): white; else: grey)) {
+  footer::after {
+    content: "Tu navegador no soporta la funcionalidad if";
   }
 }
 

@@ -42,7 +42,4 @@ footer {
     color: var(--text-color);
     justify-content: center;
 
-    &::after {
-        content: "Tu navegador no soporta la funcionalidad 'if'";
-    }
 }
