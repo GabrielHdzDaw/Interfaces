@@ -1,0 +1,91 @@
+:root {
+  --box-shadow: 1px 1px 10px 1px grey;
+  --border-featured: ;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 150px;
+  grid-auto-flow: dense;
+  gap: 1.1rem;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    transform: scale(1.03);
+  }
+
+  .gallery-item {
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+  }
+
+  .item-wide {
+    grid-column: span 2;
+  }
+
+  .item-tall {
+    grid-row: span 2;
+  }
+}
+
+@property --is-featured {
+  syntax: "<integer>";
+  inherits: true;
+  initial-value: 0;
+}
+
+@supports (color: if(style(--is-featured: 0): white; else: grey)) {
+  img {
+    border: none;
+    box-shadow: none;
+    transform: none;
+    transition: 0.3s;
+
+    &:hover {
+      transition: 0.3s;
+      transform: scale(1.2);
+    }
+  }
+
+  .gallery-item {
+    --is-featured: 0;
+  }
+
+  .item-featured {
+    --is-featured: 1;
+  }
+
+  .gallery-item {
+    border: if(style(--is-featured: 1): 2px solid yellow; else: 2px solid black);
+  }
+
+  img {
+    transform: if(style(--is-featured: 1): scale(1.03); else: scale(1));
+  }
+
+  footer::after {
+    content: "Tu navegador soporta la funcionalidad if";
+  }
+}
+
+@supports not(color: if(style(--is-featured: 0): white; else: grey)) {
+  footer::after {
+    content: "Tu navegador no soporta la funcionalidad if";
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .gallery-grid {
+    display: flex;
+    flex-direction: column;
+
+    .item-tall {
+      aspect-ratio: 16/10;
+    }
+  }
+}

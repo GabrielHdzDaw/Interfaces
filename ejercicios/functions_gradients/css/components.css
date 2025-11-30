@@ -1,0 +1,56 @@
+:root {
+    --product-card-bgcolor: lch(49.54% 42.12 274.16);
+    --card-title-color: hwb(180 30% 10%);
+    --card-button-gradient: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+}
+
+.product-card {
+    width: min(90vw, 380px);
+    /* padding: calc(1.5rem + 2px); Le quito el padding para poder poner el botón como en el vídeo*/
+    background-color: var(--product-card-bgcolor);
+    border-radius: 10px;
+    overflow: hidden;
+
+    .card-title {
+        font-size: clamp(1.5rem, 5vw, 2.2rem);
+        color: var(--card-title-color);
+        font-family: "Orbitron", sans-serif;
+        padding: calc(1.3rem + 2px);
+    }
+
+
+    .card-description {
+        padding: calc(1.2rem + 2px);
+        opacity: 70%;
+    }
+
+    .card-image-container img {
+        transform: scale(1.1) rotate(-5deg);
+        transition: 0.3s;
+        margin-bottom: 20px;
+    }
+
+    &:hover>.card-image-container img {
+        transform: scale(1) rotate(0);
+        transition: 0.3s;
+    }
+
+    .card-button {
+        padding: calc(1.03rem + 2px);
+        border-radius: 0px 0px 10px 10px;
+        background: var(--card-button-gradient);
+        color: color-mix(in srgb, var(--card-title-color) 50%, white 50%);
+        transition: 0.4s;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-family: "Orbitron", sans-serif;
+        font-weight: bold;
+
+        &:hover {
+            transition: 0.4s;
+            filter: hue-rotate(360deg) brightness(1.2) drop-shadow(0px -1px 10px white);
+        }
+    }
+}

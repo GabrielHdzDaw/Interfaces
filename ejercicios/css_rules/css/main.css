@@ -1,0 +1,45 @@
+@import url('gallery.css') layer(gallery);
+
+:root {
+    --header-color: #7030f8;
+    --text-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+
+    header {
+        color: var(--text-color);
+        background-color: var(--header-color);
+
+        display: flex;
+        justify-content: center;
+    }
+
+    main {
+        margin: 50px;
+    }
+}
+
+header,
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer {
+    display: flex;
+    background-color: var(--header-color);
+    color: var(--text-color);
+    justify-content: center;
+
+}
